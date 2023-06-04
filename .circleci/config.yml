@@ -24,6 +24,7 @@ jobs:
             echo "NPM --version" 
             echo $(npm --version)
             npm run frontend:install
+            npm install typescript@">=3.4.0 and <3.6.0" --save-dev
       # TODO: Install dependencies in the the backend API          
       - run:
           name: Install API Dependencies
