@@ -37,9 +37,18 @@ This application is provided to you as an alternative starter project if you do 
 
 Provision the necessary AWS services needed for running the application:
 
-1. In AWS, provision a publicly available RDS database running Postgres. <Place holder for link to classroom article>
-1. In AWS, provision a s3 bucket for hosting the uploaded files. <Place holder for tlink to classroom article>
+1. In AWS, provision a publicly available RDS database running Postgres. `db-postgres.clp6i0gg2h65.us-east-1.rds.amazonaws.com`
+1. In AWS, provision a s3 bucket for hosting the uploaded files. `http://tunguyenudacitybucket.s3-website.us-east-2.amazonaws.com/home`
 1. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
+- POSTGRES_USERNAME=postgres
+- POSTGRES_PASSWORD=admin123
+- POSTGRES_HOST=db-postgres.clp6i0gg2h65.us-east-1.rds.amazonaws.com
+- POSTGRES_DB=postgres
+- AWS_BUCKET=arn:aws:s3:::tunguyenudacitybucket
+- AWS_REGION=us-east-1
+- AWS_PROFILE=default
+- JWT_SECRET=mysecretstring
+- URL=http://localhost:8100
 1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
 1. Without closing the terminal in step 1, navigate to the udagram-frontend `cd starter/udagram-frontend` to intall the node_modules `npm install`. After installation is done start the api in dev mode with `npm run start`.
 
@@ -70,3 +79,26 @@ The e2e tests are using Protractor and Jasmine.
 ## License
 
 [License](LICENSE.txt)
+# Steps I have done and all the screenshots and link of application
+## Front-End link: 
+- The link of UI : http://tunguyenudacitybucket.s3-website.us-east-2.amazonaws.com/home
+## Screenshots
+- Last successul CircleCi build :
+    1. Build - phase :
+        ![Build.png](/screenshot/Build.png)
+    2. Hold on - phase:
+        ![HoldOn.png](/screenshot/HoldOn.png)
+    3. Deploy - phase:
+        ![Deploy](/screenshot/Deploy.png)
+- AWS RDS Overview:
+        ![RDS](/screenshot/RDSOverview.png)
+- S3 :
+        ![S3](/screenshot/S3.png)
+- Elasticbeanstalk :
+        ![EB](/screenshot/EB.png)
+- Environment Variable in CircleCi:
+        ![Env](/screenshot/Env.png)
+- Home Page:
+        ![HomePage](/screenshot/HomePage.png)
+- Home Page Register:
+        ![Register](/screenshot/Register.png)
